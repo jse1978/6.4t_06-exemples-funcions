@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="autor" content="Jaume Solé">
+<link href="main.css" rel="stylesheet" type="text/css">
+<script  type="text/javascript">
+//javascript
+/*Declaración de funcionse*/
+
+function EnergiaCineticaImpacto (massaP, alturaP) {
+	/*Esta funcion nos calucla la energia  cinetica (en Jouls) de impacto al dejar
+	caer un cuerpo de una altura determinada. la massa la tenemos que introducir en 
+	kilogramos i la altura en metros.*/
+
+	var GRAVEDAD = 9.8;
+	var energia = Math.round(massaP*alturaP*GRAVEDAD);
+	return energia;
+}
+
+function comprobarNumero(numero){
+	/*Funcion para comprobar si un numero es negativo si es negativo nos pide que volvamos a intrducir el numero sino no.
+	*/
+	var nouNumero;
+	
+	if (numero<0){
+		nouNumero = prompt("atenció has introduit un numero negatiu.\n Siusplau introdueix un numero positu");
+	}else{
+		nouNumero = numero;
+	}
+	return nouNumero;
+}
+
+/*Programa*/
+var massa = comprobarNumero(prompt("introdueix la massa en Kg."));
+var altura = comprobarNumero(prompt("introdueix la altura en metres."));
+var resultat = EnergiaCineticaImpacto(massa,altura);
+alert("Ec = "+resultat+" J");
+
+
+</script>
+<title>Funcions</title>
+</head>
+<body>
+
+</body>
+</html>

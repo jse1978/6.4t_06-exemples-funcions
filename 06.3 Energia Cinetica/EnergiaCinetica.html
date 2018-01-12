@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="autor" content="Jaume Solé">
+		<link href="main.css" rel="stylesheet" type="text/css">
+		<script  type="text/javascript">
+
+			/* Declaración de funciones */
+
+			function EnergiaCineticaImpacto (massaP, alturaP) {
+				
+			    /*Esta funcion nos calucla la energia  cinetica (en Jouls) de impacto al dejar
+				caer un cuerpo de una altura determinada. la massa la tenemos que introducir en 
+				kilogramos i la altura en metros.*/
+				
+			    const GRAVEDAD = 9.8; // Usar 'const' en lugar de 'var' nos permite reservar la palabra "GRAVEDAD" i preservar su valor.
+				var energia = Math.round(massaP*alturaP*GRAVEDAD);
+				return energia;
+			}
+
+			/* Input Datos */
+
+			var massa = Number(prompt("introdueix la massa en Kg."));
+			var altura = Number(prompt("introdueix la altura en metres."));
+			
+			/* Operaciones */
+
+			var resultat = EnergiaCineticaImpacto(massa,altura);
+
+			/* Output Datos */
+
+			alert("Ec = "+resultat+" J");
+
+		</script>
+		<title>Funcions</title>
+	</head>
+	<body>
+
+	</body>
+</html>

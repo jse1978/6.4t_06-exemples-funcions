@@ -8,13 +8,13 @@
 
 body
 {
-
 	background-color: rgb(180,180,180);
 	width: 50%;
 	margin: 200px auto;
 	font-family: arial;
 	text-align: center;
 }
+
 form
 {
 	width: 200px;
